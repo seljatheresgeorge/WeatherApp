@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="fun.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP9Uao5250FRIERzx4DhoiwnPPIp5yfIs&libraries=places&callback=initAutocomplete" async defer></script>
+</head>
+<body onload="starthere()">
+	<div class="se-pre-con"></div>
+	<div class="layer" id="container">
+		<div class="img-container"> 
+			<div class="positioning">
+				<div id="top">
+					<div class="Rectangle-2">
+						<input type="text" name="place" class="Search-for-City" placeholder="Search for City" id="citysearch" onfocus="geolocate()">
+						<div onclick="getlocweather()"><img src="img/search-icon.png" srcset="img/search-icon@2x.png 2x, img/search-icon@3x.png 3x" class="search_icon"></div>
+					</div>
+					<div id="currentloc" onclick="starthere()">
+						<p class="Youre-now-at">You're now at</p>
+						<img src="img/location-icon.png" srcset="img/location-icon@2x.png 2x, img/location-icon@3x.png 3x" class="location_icon">
+						<div class="mylocation"><p class="cityname"></p></div>
+						<div id="currentweather">
+							<div id="curweath">
+								<div id="curtemp">
+									<p id="curtempval">25</p>
+									<p>&deg;</p>
+								</div>
+								<p class="curC">C</p>
+								<div>
+									<img class="curwimg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="Rectangle-5">
+					<p id="city"></p>
+					<p id="country"></p>
+				</div>
+				<div id="today">
+					<p class="day"></p>
+					<p class="layer" id="date"></p>
+					<p id="monyear"></p>
+				</div>
+				<div id="tempandweath">
+					<div id="temp">
+						<p id="tempval"></p>
+						<p>&deg;</p>
+					</div>
+					<p class="C">C</p>
+					<div>
+						<img class="weather-image">
+					</div>
+				</div>
+				<div class="Rectangle-3"></div>
+				<div class="weekdays">
+					<div class="dayone">
+						<p id="day1"></p><br>
+						<img src="" srcset="" class="image1">
+						<div>
+							<p id="tempmax1"></p>
+						</div>
+						<div>
+							<p id="tempmin1"></p>
+						</div>
+					</div>
+					<div class="daytwo">
+						<p id="day2"></p><br>
+						<img src="" srcset="" class="image2">
+						<div>
+							<p id="tempmax2"></p>
+						</div>
+						<div>
+							<p id="tempmin2"></p>
+						</div>
+					</div>
+					<div class="daythree">
+						<p id="day3"></p><br>
+						<img src="" srcset="" class="image3">
+						<div>
+							<p id="tempmax3"></p>
+						</div>
+						<div>
+							<p id="tempmin3"></p>
+						</div>
+					</div>
+					<div class="dayfour">
+						<p id="day4"></p><br>
+						<img src="" srcset="" class="image4">
+						<div>
+							<p id="tempmax4"></p>
+						</div>
+						<div>
+							<p id="tempmin4"></p>
+						</div>
+					</div>
+					<div class="dayfive">
+						<p id="day5"></p><br>
+						<img src="" srcset="" class="image5">
+						<div>
+							<p id="tempmax5"></p>
+						</div>
+						<div>
+							<p id="tempmin5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="img/bg-img.png" srcset="img/bg-img@2x.png 2x, img/bg-img@3x.png 3x" class="bg_img">
+			<div class="Rectangle-4">
+				<p class="foot">&copy; 2017, WeatherApp</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
